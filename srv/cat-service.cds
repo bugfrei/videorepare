@@ -5,6 +5,7 @@ service CatalogService @(requires: 'user') {
 }
 
 service AdminService @(requires: 'admin') {
+    @odata.draft.enabled
     entity Books as projection on my.Books;
 }
 
