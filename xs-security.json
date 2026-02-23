@@ -3,7 +3,9 @@
   "tenant-mode": "dedicated",
   "oauth2-configuration": {
     "redirect-uris": [
-        "https://suportis-ag-prepare-gzgzf7vz-dev-vidprep.cfapps.eu10-004.hana.ondemand.com/**"
+        "https://suportis-ag-prepare-gzgzf7vz-dev-vidprep.cfapps.eu10-004.hana.ondemand.com/**",
+        "https://suportis-ag-prepare-1-3uit9n0t-dev-vidprep.cfapps.eu10-004.hana.ondemand.com/**",
+        "https://suportis-ag-prepare-prod-5xv9cpkz-dev-vidprep.cfapps.eu10-004.hana.ondemand.com/**"
     ]
   },
   "scopes": [

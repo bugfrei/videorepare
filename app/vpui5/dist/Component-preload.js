@@ -15,6 +15,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller"],function(n){"use strict";return n.e
 sap.ui.define(["sap/ui/model/json/JSONModel","sap/ui/Device"],function(e,n){"use strict";return{createDeviceModel:function(){var i=new e(n);i.setDefaultBindingMode("OneWay");return i}}});
 },
 	"vpui5/view/App.view.xml":'<mvc:View controllerName="vpui5.controller.App"\n    xmlns:html="http://www.w3.org/1999/xhtml"\n    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"\n    xmlns="sap.m"><App id="app"></App></mvc:View>\n',
-	"vpui5/view/View1.view.xml":'<mvc:View controllerName="vpui5.controller.View1"\n    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"\n    xmlns="sap.m"><Page id="page" title="{i18n>title}"><content><Title text="UI5 App V1" /><List items="{/Books}"><ObjectListItem title="{title}" number="{stock}" numberUnit="pcs" /></List></content></Page></mvc:View>\n'
+	"vpui5/view/View1.view.xml":'<mvc:View controllerName="vpui5.controller.View1"\n    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"\n    xmlns="sap.m"><Page id="page" title="{i18n>title}"><content><Title text="UI5 App V2" /><List items="{/Books}"><ObjectListItem title="{title}" number="{stock}" numberUnit="pcs" /></List></content></Page></mvc:View>\n'
 });
 //# sourceMappingURL=Component-preload.js.map
