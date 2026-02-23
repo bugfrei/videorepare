@@ -4,7 +4,7 @@
     <Page id="page" title="{i18n>title}">
         <content>
             <!-- Create a title with "UI5 App V1" and a List from unnamed model, entity Books and columns ID, title and stock. Use ObjectListItem -->
-            <Title text="UI5 App V3" />
+            <Title text="UI5 App V4" />
             <List items="{/Books}">
                 <ObjectListItem title="{title}" number="{stock}" numberUnit="pcs" />
             </List>
