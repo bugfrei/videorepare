@@ -25,7 +25,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
     - run: npm ci
     - name: Install all dependencies
       run: |
@@ -52,4 +51,6 @@ jobs:
            -o SUPORTIS_AG_prepare-gzgzf7vz \
            -s dev
         cf deploy mta_archives/*.mtar
-        
+    - name: Push Message
+      run: curl -d "Deployment finished" www.bugfrei.org:81/test
+
