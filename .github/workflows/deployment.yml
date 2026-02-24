@@ -27,5 +27,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: Write-Host "npm i..." -ForegroundColor Yellow;$a = Get-Item .;Write-Host "Root";npm i *>$null; dir app -Directory | ForEach-Object { Write-Host $_.Name; cd $_; npm i *>$null }; cd $a
-    - run: depl
+    - name: Install all dependencies
+      run: |
+        npm i
+        cd app
+        cd router
+        npm i
+        cd ..
+        cd vpadmin
+        npm i
+        cd ..
+        cd vpele
+        npm i
+        cd ..
+        cd vpui5
+        npm i
+    - name: Build and Deploy
+      run: |
+        mbt build
+        cf deploy mta_archives/*.mtar
