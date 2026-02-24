@@ -42,7 +42,14 @@ jobs:
         cd ..
         cd vpui5
         npm i
-    - name: Build and Deploy
+    - name: Build 
+      run: mbt build
+    - name: Deploy to Cloud Foundry
       run: |
-        mbt build
+        cf login -a ${{ secrets.CF_APIURL }} \
+           -u ${{ secrets.CF_USERNAME }} \
+           -p ${{ secrets.CF_PASSWORD }} \
+           -o SUPORTIS_AG_prepare-gzgzf7vz \
+           -s dev
         cf deploy mta_archives/*.mtar
+        
